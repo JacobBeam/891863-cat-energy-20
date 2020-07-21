@@ -1,0 +1,10 @@
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin text($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
