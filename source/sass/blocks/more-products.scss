@@ -15,6 +15,7 @@
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title-alt;
+  text-transform: uppercase;
 
   @include text(16px, 20px);
   text-align: center;
@@ -34,7 +35,6 @@
   margin: 0;
   margin-bottom: 20px;
   color: $color-text;
-  text-transform: uppercase;
 
   @include text(12px, 16px);
   text-align: center;
