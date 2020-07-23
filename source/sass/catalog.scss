@@ -1,0 +1,28 @@
+.catalog {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.catalog__title {
+  margin: 0;
+  padding: 29px 20px 35px 20px;
+  font-family: $title-font;
+  font-weight: normal;
+
+  @include text(36px, 36px);
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  border-top: 1px solid $color-catalog-border;
+
+
+  &:last-child {
+    border-bottom: 1px solid $color-catalog-border;
+  }
+}

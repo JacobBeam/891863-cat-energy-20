@@ -1,0 +1,17 @@
+.header {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.header__top {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+  border-bottom: 1px solid $color-link-border;
+}
+
+.header__burger {
+  display: none;
+}

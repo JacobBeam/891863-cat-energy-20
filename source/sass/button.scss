@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  color: $color-text-alt;
+  text-transform: uppercase;
+  background-color: $color-bg-btn;
+  font-family: $title-font;
+  font-weight: normal;
+
+  @include text(14px, 18px);
+
+  &--theme--gray {
+    color: $color-text;
+    background-color: $color-bg;
+  }
+}

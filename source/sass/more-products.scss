@@ -1,0 +1,38 @@
+.more-products {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.more-products__wrapper {
+  padding: 0 20px;
+}
+
+.more-products__title {
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 8px;
+  padding-top: 55px;
+  font-family: $title-font;
+  font-weight: normal;
+
+  @include text(16px, 20px);
+  text-align: center;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 125px;
+    background: url("../img/icon-plus-mobile.svg");
+  }
+}
+
+.more-products__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include text(12px, 16px);
+  text-align: center;
+}
