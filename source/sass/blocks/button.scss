@@ -9,10 +9,23 @@
   font-family: $title-font;
   font-weight: normal;
 
-  @include text(14px, 18px);
-
   &--theme--gray {
     color: $color-text;
     background-color: $color-bg;
+  }
+
+  &--size--promo {
+    @include text(14px, 18px);
+    padding: 7px 5px;
+  }
+
+  &--size-product {
+    @include text(16px, 0);
+    padding: 20px 5px;
+  }
+
+  &--size--form {
+    @include text(16px, 20px);
+    padding: 7px 5px;
   }
 }

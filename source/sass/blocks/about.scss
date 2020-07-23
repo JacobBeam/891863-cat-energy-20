@@ -28,6 +28,7 @@
 .about__item {
   display: flex;
   margin-bottom: 20px;
+  color: $color-text-paragraph;
 
   &::before {
     content: "";
