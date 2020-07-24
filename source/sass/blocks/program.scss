@@ -1,0 +1,26 @@
+.program {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.program__title {
+  margin: 0;
+  padding: 25px 20px 15px 20px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+
+  @include text(36px, 36px);
+}
+
+
+.program__subtitle {
+  padding: 0 20px;
+  margin-bottom: 35px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+  text-transform: uppercase;
+
+  @include text(14px, 18px);
+}

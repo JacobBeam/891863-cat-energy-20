@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+
+  &--style--line {
+    border-bottom: 1px solid $color-border-text;
+  }
+}
+
+.form__row {
+  display: flex;
+  padding: 0 20px;
+  margin-bottom: 13px;
+}
+
+.form__label {
+  padding: 10px;
+  margin-right: 15px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-paragraph;
+  text-transform: uppercase;
+
+  @include text(16px, 18px);
+
+  &--style--check {
+    padding-left: 46px;
+    color: $color-text-title;
+  }
+
+  &--style--radio {
+    padding-left: 46px;
+    color: $color-card-title;
+  }
+}
+
+.form__input {
+  padding: 10px;
+  flex-grow: 1;
+
+
+  &--theme--light {
+    border: 1px solid $color-border;
+  }
+
+  &--theme--dark {
+    border: 1px solid $color-border-hover;
+  }
+
+  &::placeholder {
+    font-family: $title-font;
+    font-weight: normal;
+    color: $color-text-paragraph;
+    text-transform: uppercase;
+
+    @include text(16px, 18px);
+  }
+
+  &--textarea {
+    min-height: 150px;
+  }
+}
+
+.form__legend {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+  text-transform: uppercase;
+
+  @include text(24px, 26px);
+}
+
+.form__text {
+  text-align: center;
+  color: $color-text-title;
+
+  @include text(14px, 16px);
+}
