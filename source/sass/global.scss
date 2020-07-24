@@ -1,0 +1,35 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-weight: 400;
+  background-color: $color-bg-body;
+
+  @include text(14px, 18px);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

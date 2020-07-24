@@ -1,0 +1,16 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__name {
+  @include text(16px, 18px);
+  color: $color-text;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+}
