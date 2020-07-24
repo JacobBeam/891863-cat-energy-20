@@ -5,6 +5,7 @@
 .proposal__title {
   font-family: $title-font;
   font-weight: 400;
+  color: $color-text-title;
 
   @include text(24px, 37px);
   padding-top: 30px;

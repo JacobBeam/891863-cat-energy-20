@@ -8,6 +8,7 @@
   padding: 29px 20px 35px 20px;
   font-family: $title-font;
   font-weight: normal;
+  color: $color-text-title;
 
   @include text(36px, 36px);
 }
