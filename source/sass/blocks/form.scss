@@ -77,7 +77,6 @@
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;
-  text-transform: uppercase;
 
   @include text(24px, 26px);
 }

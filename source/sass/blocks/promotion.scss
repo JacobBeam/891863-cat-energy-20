@@ -20,7 +20,7 @@
 }
 
 .promotion__icon {
-  width: 160px;
+  width: 180px;
   height: 78px;
   fill: $color-text-alt;
   margin-bottom: 45px;
@@ -30,4 +30,6 @@
   flex-basis: 100%;
   text-align: center;
   color: $color-text-alt;
+
+  @include text(16px, 20px);
 }

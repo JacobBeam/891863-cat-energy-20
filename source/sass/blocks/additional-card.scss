@@ -4,6 +4,7 @@
   font-family: $title-font;
   font-weight: normal;
   color: $color-card-title;
+  text-transform: uppercase;
 
   @include text(16px, 16px);
 }
