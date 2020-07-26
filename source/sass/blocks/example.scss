@@ -1,0 +1,83 @@
+.example {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $color-bg-alt;
+}
+
+.example__wrapper {
+  padding: 0 20px;
+}
+
+.example__title {
+  margin: 0;
+  padding-top: 27px;
+  margin-bottom: 33px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+
+  @include text(36px, 40px);
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 25px;
+  color: $color-text-paragraph;
+}
+
+.example__stats {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.example__column {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.example__description {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  margin-top: -8px;
+  padding: 0;
+  width: 87px;
+  color: $color-text-paragraph;
+  background-color: $color-bg-alt;
+  text-align: center;
+
+  @include text(12px, 12px);
+}
+
+.example__value {
+  margin: 0;
+  padding: 10px 0;
+  width: 124px;
+  border: 1px solid $color-border-hover;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include text(24px, 24px);
+}
+
+.example__price {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include text(14px, 20px);
+}

@@ -35,61 +35,92 @@
   <main>
     <section class="program">
       <h1 class="program__title">Подбор программы</h1>
-      <p class="program__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="program__subtitle">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
       <form class="program__form form" action="https://echo.htmlacademy.ru/" method="GET">
-        <fieldset class="form__fieldset">
-          <label class="form__label" for="name">Имя:*</label>
-          <input class="form__input" type="text" name="name" id="name" placeholder="Барсик" required>
-          <label class="form__label" for="weight">Вес (кг):*</label>
-          <input class="form__input" type="number" min="0" max="100" step="0.1" name="Weight" value="7" id="weight"
-            required>
-          <label class="form__label" for="age">Возраст (лет):</label>
-          <input class="form__input" type="number" min="0" max="100" step="1" name="age" value="7" id="age">
+        <fieldset class="form__fieldset form__fieldset--style--line">
+          <div class="form__row">
+            <label class="form__label" for="name">Имя:*</label>
+            <input class="form__input form__input--theme--light" type="text" name="name" id="name" placeholder="Барсик"
+              required>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="weight">Вес (кг):*</label>
+            <input class="form__input form__input--theme--light" type="number" min="0" max="100" step="0.1"
+              name="Weight" placeholder="7" id="weight" required>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="age">Возраст (лет):</label>
+            <input class="form__input form__input--theme--light" type="number" min="0" max="100" step="1" name="age"
+              placeholder="7" id="age">
+          </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <label class="form__label">
-            <input class="form__input form__input--direction--right" type="radio" name="program-type"
-              value="weight-loss" checked>Похудение
-          </label>
-          <label class="form__label">
-            <input class="form__input form__input--direction--right" type="radio" name="program-type"
-              value="weight-gain" checked>Набор массы
-          </label>
-          <label class="form__label">
-            <input class="form__input form__input--direction--right" type="radio" name="program-type" value="advice"
-              checked>Не знаю (Нужен ваш совет)
-          </label>
+        <fieldset class="form__fieldset form__fieldset--style--line">
+          <div class="form__row">
+            <label class="form__label form__label--style--radio">
+              <input class="form__input form__input--style--radio" type="radio" name="program-type" value="weight-loss"
+                checked>Похудение
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__label form__label--style--radio">
+              <input class="form__input form__input--style--radio" type="radio" name="program-type" value="weight-gain"
+                checked>Набор массы
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__label form__label--style--radio">
+              <input class="form__input form__input--style--radio" type="radio" name="program-type" value="advice"
+                checked>Не знаю (Нужен ваш совет)
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <label class="form__label" for="email">E-mail:*</label>
-          <input class="form__input form__input--type--email" type="email" name="email" id="email"
-            placeholder="kuklachev@gmail.com" required>
-          <label class="form__label" for="phone">Телефон:*</label>
-          <input class="form__input form__input--type--phone" type="tel" name="phone" id="phone"
-            placeholder="8 (960) 900-60-90" required>
+          <div class="form__row">
+            <label class="form__label" for="email">E-mail:*</label>
+            <input class="form__input form__input--theme--dark form__input--type--email" type="email" name="email"
+              id="email" placeholder="kuklachev@gmail.com" required>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="phone">Телефон:*</label>
+            <input class="form__input form__input--theme--dark form__input--type--phone" type="tel" name="phone"
+              id="phone" placeholder="8 (960) 900-60-90" required>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Комментарий</legend>
-          <textarea class="form__input" rows="4" name="comment" id="comment"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="form__row">
+            <textarea class="form__input form__input--textarea form__input--theme--light" rows="4" name="comment"
+              id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Дополнительно</legend>
-          <input class="form__input" type="checkbox" name="extra" value="sugar-substitute" id="sugar-substitute"
-            checked>Cахарозаменитель
-          <label class="form__label" for="sugar-substitute"></label>
-          <input class="form__input form__input--direction--right" type="checkbox" name="extra" value="water"
-            id="water">Питьевая вода
-          <label class="form__label" for="water"></label>
-          <input class="form__input form__input--direction--right" type="checkbox" name="extra" value="milk"
-            id="milk">Молоко
-          <label class="form__label" for="milk"></label>
-          <input class="form__input form__input--direction--right" type="checkbox" name="extra" value="vitamins"
-            id="vitamins">Витамины
-          <label class="form__label" for="vitamins"></label>
+          <div class="form__row">
+            <label class="form__label form__label--style--check" for="sugar-substitute"><input class="form__input"
+                type="checkbox" name="extra" value="sugar-substitute" id="sugar-substitute"
+                checked>Cахарозаменитель</label>
+          </div>
+          <div class="form__row">
+
+            <label class="form__label form__label--style--check" for="water"><input
+                class="form__input form__input--style--check" type="checkbox" name="extra" value="water"
+                id="water">Питьевая вода</label>
+          </div>
+          <div class="form__row">
+
+            <label class="form__label form__label--style--check" for="milk"><input
+                class="form__input form__input--style--check" type="checkbox" name="extra" value="milk"
+                id="milk">Молоко</label>
+          </div>
+          <div class="form__row">
+
+            <label class="form__label form__label--style--check" for="vitamins"><input
+                class="form__input form__input--style--check" type="checkbox" name="extra" value="vitamins"
+                id="vitamins">Витамины</label>
+          </div>
         </fieldset>
-        <button class="form__label button button--size--form" type="submit">Отправить заявку</button>
+        <button class="button button--size--form" type="submit">Отправить заявку</button>
         <p class="form__text">* — Обязательные поля</p>
       </form>
     </section>
@@ -102,7 +133,7 @@
         <p class="contacts__addres">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
       <div class="contacts__map">
-        <img src="https://via.placeholder.com/320x362" alt="Карта с указанием адреса офиса" width="320" height="362">
+        <!--Тут будет карта-->
       </div>
     </section>
     <div class="footer__wrapper">

@@ -1,0 +1,34 @@
+.additional-goods {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.additional-goods__wrapper {
+  padding: 0 20px;
+}
+
+.additional-goods__title {
+  margin: 0;
+  padding: 28px 0 35px 0;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+
+  @include text(24px, 24px);
+}
+
+.additional-goods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional-goods__item {
+  border-top: 1px solid $color-border-hover;
+  padding-top: 10px;
+  padding-bottom: 16px;
+
+  &:last-child {
+    border-bottom: 1px solid $color-border-hover;
+  }
+}

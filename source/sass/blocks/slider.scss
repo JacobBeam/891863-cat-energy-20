@@ -1,0 +1,36 @@
+.slider__list {
+  margin-bottom: 20px;
+}
+
+.slider__after {
+  display: none;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.slider__toggle {
+  margin: 0;
+  border: none;
+  background-color: inherit;
+  font-family: $title-font;
+  font-weight: normal;
+  color: $color-text-title;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include text(16px, 20px);
+}
+
+.slider__controls {
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: 1 solid $color-border-hover;
+  background-color: $color-bg-body;
+  margin: 0 15px 0 15px;
+}
