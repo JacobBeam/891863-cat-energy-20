@@ -1,20 +1,25 @@
-.offers {
-  width: 320px;
-  margin: 0 auto;
-}
-
-.offers__wrapper {
-
-  padding: 0 20px;
-}
-
 .offers__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .offers__item {
   padding: 0 20px;
   margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 70px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
 }
