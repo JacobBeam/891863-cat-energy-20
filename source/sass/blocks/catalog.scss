@@ -1,12 +1,21 @@
 .catalog__title {
   margin: 0;
-  padding-top: 29px;
-  padding-bottom: 35px;
+  padding: 29px 20px 35px 20px;
+  min-width: 320px;
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;
 
   @include text(36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    padding: 29px 30px 35px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
 }
 
 .catalog__list {

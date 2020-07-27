@@ -35,4 +35,8 @@
   padding: 22px 5px 24px 5px;
   color: $color-link;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    color: $color-link-alt;
+  }
 }
