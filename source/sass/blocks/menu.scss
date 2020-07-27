@@ -36,7 +36,9 @@
   color: $color-link;
   text-transform: uppercase;
 
-  @media (min-width: $desktop-width) {
-    color: $color-link-alt;
+  &--style--light {
+    @media (min-width: $desktop-width) {
+      color: $color-link-alt;
+    }
   }
 }
