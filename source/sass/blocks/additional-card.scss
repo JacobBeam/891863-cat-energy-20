@@ -7,22 +7,62 @@
   text-transform: uppercase;
 
   @include text(16px, 16px);
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+}
+
+.additional-card__row {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-card__stats {
+  margin: 0;
   display: flex;
-  margin-bottom: 15px;
   justify-content: space-between;
+
+  margin-bottom: 15px;
   color: $color-text-paragraph;
 
   @include text(14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
 }
 
 .additional-card__description {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    text-align: end;
+  }
 }
 
 .additional-card__value {
   margin: 0;
+
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    text-align: end;
+  }
+}
+
+.additional-card__link {
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    margin-left: auto;
+  }
 }
