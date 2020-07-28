@@ -9,10 +9,24 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .menu__item {
   border-bottom: 1px solid $color-link-border;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .menu__link {
@@ -21,4 +35,10 @@
   padding: 22px 5px 24px 5px;
   color: $color-link;
   text-transform: uppercase;
+
+  &--style--light {
+    @media (min-width: $desktop-width) {
+      color: $color-link-alt;
+    }
+  }
 }

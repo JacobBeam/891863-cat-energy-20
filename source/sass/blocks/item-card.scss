@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
 }
 
 .item-card__image {
@@ -18,7 +17,6 @@
 }
 
 .item-card__info {
-  flex-grow: 1;
   margin-top: 13px;
 }
 
@@ -32,19 +30,32 @@
 }
 
 .item-card__stats {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.item-card__row {
+  display: flex;
+
 
   @include text(12px, 16px);
   color: $color-text;
 }
 
+.item-card__description {
+  flex-grow: 1;
+}
+
 .item-card__value {
+  flex-grow: 1;
   margin: 0;
   text-align: right;
 }
 
 .item-card__order {
   margin: 0 20px 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 38px 40px;
+  }
 }
