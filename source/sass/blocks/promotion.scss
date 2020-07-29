@@ -1,33 +1,79 @@
 .promotion {
-  width: 320px;
-  margin: 0 auto;
+  min-width: 320px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 0;
+  }
 }
 
 .promotion__wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 289px;
+
   margin: 39px 20px 35px 20px;
-  position: relative;
+
   background-color: $color-bg-btn;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    margin: 30px 30px 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 289px;
+
+    margin: 0;
+    align-items: stretch;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+    background-position: top left;
+  }
 }
 
 .promotion__item {
-  position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .promotion__icon {
-  width: 180px;
+  width: 80px;
   height: 78px;
+  margin-bottom: 48px;
   fill: $color-text-alt;
-  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    margin-bottom: 48px;
+  }
 }
 
 .promotion__link {
-  flex-basis: 100%;
+
   text-align: center;
   color: $color-text-alt;
 

@@ -1,11 +1,27 @@
 .example {
-  width: 320px;
-  margin: 0 auto;
-  background-color: $color-bg-alt;
+  background: $color-bg-alt;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient($color-bg-body 50%, $color-bg-alt 50% 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient($color-bg-body 20%, $color-bg-alt 20% 100%);
+  }
 }
 
 .example__wrapper {
-  padding: 0 20px;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__content {
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-right: 15px;
+  }
 }
 
 .example__title {
@@ -26,19 +42,34 @@
 }
 
 .example__stats {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.example__row {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 370px;
+  }
 }
 
 .example__column {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -54,6 +85,14 @@
   text-align: center;
 
   @include text(12px, 12px);
+
+  @media (min-width: $tablet-width) {
+    background-color: $color-bg-body;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-bg-alt;
+  }
 }
 
 .example__value {
@@ -70,7 +109,7 @@
   @include text(24px, 24px);
 }
 
-.example__price {
+.example__cost {
   margin: 0;
   margin-bottom: 40px;
   font-family: $title-font;
@@ -80,4 +119,24 @@
   text-align: center;
 
   @include text(14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.example__price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
+  }
+}
+
+.example__image {
+  text-align: center;
 }

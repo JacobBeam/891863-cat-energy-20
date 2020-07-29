@@ -3,17 +3,35 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
 }
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
   min-height: 66px;
   border-bottom: 1px solid $color-link-border;
 
   @media (min-width: $tablet-width) {
     border: none;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding-left: 30px;
+  }
+}
+
+.header__bottom {
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
   }
 }
 
