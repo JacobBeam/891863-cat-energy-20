@@ -1,5 +1,15 @@
 .contacts {
   position: relative;
+
+  //временно для сетки
+  @media (min-width: $tablet-width) {
+    height: 601px;
+  }
+
+  //временно для сетки
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 }
 
 .contacts__wrapper {

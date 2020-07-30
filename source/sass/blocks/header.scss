@@ -2,11 +2,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     max-width: $desktop-width;
+    padding-top: 47px;
   }
 }
 
@@ -35,17 +37,69 @@
   }
 }
 
-.header__logo {
+.header__logo img {
   @media (min-width: $tablet-width) {
     width: 174px;
+    height: 58px;
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
+    height: 59px;
   }
 }
 
 .header__burger {
+  background-color: inherit;
+  border: none;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  margin-right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: $color-link;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: $color-link;
+    top: 7.5px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  &--inactive::before {
+    transform: rotate(45deg);
+    top: 7.5px;
+  }
+
+  &--inactive::after {
+    transform: rotate(-45deg);
+    bottom: 7.5px;
+  }
+
+  &--inactive span {
+    transform: scale(0);
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }

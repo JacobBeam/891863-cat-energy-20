@@ -16,12 +16,12 @@
 
   &--size--promo {
     @include text(14px, 18px);
-    padding: 7px 5px;
+    padding: 11px 5px;
 
     @media (min-width: $tablet-width) {
       @include text(20px, 0);
       width: 244px;
-      padding: 25px 5px;
+      padding: 28px 5px;
     }
   }
 

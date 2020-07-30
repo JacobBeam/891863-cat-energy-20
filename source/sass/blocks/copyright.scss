@@ -8,9 +8,19 @@
 .copyright__name {
   @include text(16px, 18px);
   color: $color-text;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
 }
 
 .copyright__logo {
+  display: flex;
   width: 27px;
   height: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 27px;
+    height: 34px;
+  }
 }
