@@ -209,7 +209,7 @@
     width: 24px;
     height: 12px;
     top: 2px;
-    right: -25px;
+    left: 118px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
   }
 
@@ -220,7 +220,18 @@
 
     &::after {
       top: 8px;
-      right: -34px;
+      left: 185px;
     }
+  }
+
+  &:hover::after {
+    @include pseudo;
+    width: 32px;
+    height: 10px;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

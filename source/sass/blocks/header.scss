@@ -37,7 +37,7 @@
   }
 }
 
-.header__logo img {
+.header__logo {
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 58px;
@@ -46,6 +46,21 @@
   @media (min-width: $desktop-width) {
     width: 202px;
     height: 59px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__image {
+  @media (min-width: $tablet-width) {
+
+    width: 100%;
   }
 }
 
