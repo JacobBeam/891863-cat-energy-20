@@ -31,10 +31,10 @@
 
 .contacts__text {
 
-  flex-grow: 1;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 
   @media (min-width: $tablet-width) {
     padding: 0 41px;
@@ -54,12 +54,13 @@
 
 .contacts__title {
   margin: 0;
+  margin-right: 18px;
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title-alt;
   text-transform: uppercase;
 
-  @include text(16px, 18px);
+  @include text(16px, 21px);
 }
 
 .contacts__addres {
@@ -82,8 +83,8 @@
     @include pseudo;
     width: 57px;
     height: 53px;
-    top: 50%;
-    left: 50%;
+    top: 39%;
+    left: 41%;
     background-image: url("../img/map-pin.png");
     background-size: contain;
   }

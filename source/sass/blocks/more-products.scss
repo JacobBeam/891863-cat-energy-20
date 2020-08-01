@@ -23,8 +23,8 @@
 
 .more-products__title {
   margin: 0;
-  margin-top: 26px;
-  margin-bottom: 8px;
+  margin-top: 23px;
+  margin-bottom: 9px;
   padding-top: 55px;
   font-family: $title-font;
   font-weight: normal;
@@ -39,7 +39,7 @@
     @include pseudo;
     width: 30px;
     height: 30px;
-    top: 0;
+    top: 2px;
     left: 125px;
     background: url("../img/icon-plus-mobile.svg");
   }
@@ -75,7 +75,7 @@
     align-self: center;
     text-align: center;
     width: 170px;
-    margin-bottom: 87px;
+    margin-bottom: 88px;
 
     @include text(16px, 18px);
   }
@@ -83,6 +83,6 @@
 
 .more-products__link {
   @media (min-width: $tablet-width) {
-    margin: 0 38px 36px;
+    margin: 0 38px 38px;
   }
 }

@@ -13,31 +13,36 @@
   display: flex;
   padding: 0 20px 0 20px;
   justify-content: center;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
     padding: 0 36px 0 36px;
+    align-items: center;
+    margin-bottom: 0;
   }
 }
 
 .item-card__image {
   display: flex;
+  //justify-content: center;
   justify-content: center;
   align-items: center;
   width: 140px;
   padding-top: 1px;
 
   @media (min-width: $tablet-width) {
-    align-self: center;
+    //align-self: center;
     width: 168px;
     position: relative;
-    top: -61px;
+    top: -79px;
     margin-bottom: -61px;
   }
 
   @media (min-width: $desktop-width) {
-    top: -71px;
-    margin-bottom: -61px;
+    width: 172px;
+    top: -80px;
+    margin-bottom: -59px;
   }
 }
 
@@ -47,6 +52,7 @@
 
 
   @media (min-width: $tablet-width) {
+    margin-top: 20px;
     margin-bottom: 33px;
     width: 100%;
     display: flex;
@@ -60,13 +66,19 @@
 }
 
 .item-card__picture {
-  width: 140px;
+  //width: 140px;
   object-fit: cover;
 
 
   @media (min-width: $tablet-width) {
     width: 168px;
     height: 200px;
+    object-fit: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 172px;
+    height: 198px;
     object-fit: none;
   }
 }
@@ -88,7 +100,7 @@
     width: 140px;
     align-self: center;
     text-align: center;
-    padding-left: 3px;
+    padding-left: 4px;
     margin-top: -5px;
   }
 
@@ -103,7 +115,7 @@
   padding: 0;
   width: 100%;
   padding-top: 11px;
-  margin-left: -1px;
+  margin-left: -2px;
 
   @media (min-width: $desktop-width) {
     padding-top: 16px;
@@ -119,8 +131,14 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $color-border-hover;
 
-    @include text(16px, 16px);
+    @include text(17px, 17px);
     padding: 6px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 1px solid $color-border-hover;
+
+    @include text(17px, 17px);
   }
 }
 
@@ -132,19 +150,20 @@
   flex-grow: 1;
   margin: 0;
   text-align: right;
-  margin-right: -3px;
+  margin-right: -4px;
 
   @media (min-width: $tablet-width) {
-    margin-right: -2px;
+    margin-right: -5px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 0;
+    margin-right: -3px;
   }
 }
 
 .item-card__link {
   display: flex;
+  margin-top: auto;
 }
 
 .item-card__order {

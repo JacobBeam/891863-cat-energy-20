@@ -21,6 +21,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 29px 40px 35px 40px;
     margin: 0 auto;
     margin-top: 37px;
     margin-bottom: 130px;
@@ -47,7 +48,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 80px;
     //grid-row-gap: 63px;
-    grid-row-gap: 144px;
+    padding: 0 40px;
+    grid-row-gap: 141px;
     margin: 0 auto;
     max-width: $desktop-width;
   }
@@ -55,7 +57,7 @@
 
 .catalog__item {
   border-top: 1px solid $color-catalog-border;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   &:last-child {
     padding-bottom: 23px;

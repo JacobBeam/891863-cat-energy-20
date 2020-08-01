@@ -29,7 +29,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 42px;
+  //margin-bottom: 42px;
+  margin-bottom: 40px;
   counter-reset: number;
 
 
@@ -53,7 +54,11 @@
 
 .about__item {
   display: flex;
-  margin-bottom: 18px;
+  //margin-bottom: 18px;
+  //
+  margin-bottom: 16px;
+  padding-bottom: 2px;
+  //
   padding-top: 2px;
   color: $color-text-paragraph;
   position: relative;
@@ -85,6 +90,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
+    padding-top: 4px;
 
     @include text(16px, 24px);
     width: 250px;
@@ -110,5 +116,10 @@
       counter-increment: number;
       z-index: -1;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    padding-top: 2px;
   }
 }
