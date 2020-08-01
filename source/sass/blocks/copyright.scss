@@ -1,16 +1,35 @@
-.copyright {
+.copyright__name {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
 
-.copyright__name {
   @include text(16px, 18px);
   color: $color-text;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .copyright__logo {
+    fill: $color-bg-btn;
+  }
+
+  &:active .copyright__logo {
+    fill: $color-bg-btn;
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
+  display: flex;
   width: 27px;
   height: 34px;
+  fill: $social-link;
+  margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 27px;
+    height: 34px;
+    margin-left: 23px;
+  }
 }

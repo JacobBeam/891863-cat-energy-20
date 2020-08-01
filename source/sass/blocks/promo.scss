@@ -5,36 +5,44 @@
   background-position: top center, top left;
 
   @media (min-width: $tablet-width) {
-    background: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: none;
+    //background: url("../img/index-can-tablet@1x.jpg");
+    //background-repeat: no-repeat;
+    //background-position: right bottom;
   }
 
   @media (min-width: $desktop-width) {
-    background: url("../img/index-can-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-position: top center;
+    //background: url("../img/index-can-desktop@1x.png");
+    //background-repeat: no-repeat;
+    //background-position: top center;
   }
 }
 
 .promo__wrapper {
+  position: relative;
   min-width: 320px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-top: 27px;
+  }
+
   @media (min-width: $tablet-width) {
-    min-height: 770px;
+    min-height: 845px;
+    padding-top: 51px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 670px;
+    min-height: 637px;
+    padding-top: 101px;
   }
 }
 
 
 .promo__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   padding: 0;
-  padding-top: 27px;
+  //padding-top: 27px;
   font-family: $title-font;
   font-weight: normal;
   text-align: center;
@@ -44,12 +52,24 @@
 
   @media (min-width: $tablet-width) {
     color: $color-text-title;
+
+    @include text(60px, 60px);
     text-align: left;
-    margin-left: 80px;
+    margin-left: 87px;
+    margin-bottom: 41px;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 82px;
+    margin-bottom: 40px;
   }
 }
 
 .promo__subtitle {
+  margin: 0;
+  padding-right: 3px;
+  margin-bottom: 27px;
   font-family: $title-font;
   font-weight: normal;
   text-align: center;
@@ -61,8 +81,16 @@
 
   @media (min-width: $tablet-width) {
     color: $color-text;
+
+    @include text(20px, 20px);
     text-align: left;
+    margin-left: 87px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-left: 80px;
+    margin-bottom: 51px;
   }
 }
 
@@ -74,12 +102,27 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: none;
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    bottom: -15px;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    bottom: 118px;
+    left: 488px;
+    z-index: -1;
   }
 }
 
 .promo__link {
+  margin-top: 3px;
+
   @media (min-width: $tablet-width) {
-    margin-left: 80px;
+    margin-left: 82px;
   }
 }

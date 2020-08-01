@@ -1,3 +1,16 @@
+.additional-goods {
+  //Для сетки, временно
+  height: 968px;
+
+  @media (min-width: $tablet-width) {
+    height: 1044px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 523px;
+  }
+}
+
 .additional-goods__wrapper {
   @media (min-width: $desktop-width) {
     margin: 0 auto;
@@ -20,6 +33,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 29px 30px 35px 30px;
+
+    @include text(36px, 36px);
   }
 
   @media (min-width: $desktop-width) {

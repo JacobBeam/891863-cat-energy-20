@@ -9,19 +9,37 @@
   font-family: $title-font;
   font-weight: normal;
 
+  &:hover {
+    background-color: $color-bg-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-bg-btn-hover;
+    color: $color-text-alt-active;
+  }
+
   &--theme--gray {
     color: $color-text;
     background-color: $color-bg;
+
+    &:hover {
+      background-color: $color-catalog-border;
+    }
+
+    &:active {
+      background-color: $color-catalog-border;
+      color: $color-text-paragraph-active;
+    }
   }
 
   &--size--promo {
     @include text(14px, 18px);
-    padding: 7px 5px;
+    padding: 11px 5px;
 
     @media (min-width: $tablet-width) {
       @include text(20px, 0);
       width: 244px;
-      padding: 25px 5px;
+      padding: 28px 5px;
     }
   }
 
@@ -32,7 +50,7 @@
 
   &--size--form {
     @include text(16px, 20px);
-    padding: 7px 5px;
+    padding: 10px 5px;
     border: none;
   }
 }

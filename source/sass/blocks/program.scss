@@ -1,7 +1,12 @@
+.program__wrapper {
+  margin-bottom: 40px;
+}
+
 .program__title {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-top: 19px;
+  padding-bottom: 26px;
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;
@@ -12,7 +17,7 @@
 
 .program__subtitle {
 
-  margin-bottom: 35px;
+  margin: 0;
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;

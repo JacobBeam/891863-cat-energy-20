@@ -1,8 +1,27 @@
 .menu {
   font-family: $title-font;
   font-weight: 500;
+  display: none;
 
   @include text(20px, 20px);
+
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    @include text(18px, 24px);
+    font-weight: 400;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+
+    @include text(20px, 30px);
+  }
 }
 
 .menu__list {
@@ -22,28 +41,67 @@
 
   @media (min-width: $tablet-width) {
     border: none;
-    margin-right: 34px;
+    margin-right: 36px;
 
     &:last-child {
       margin-right: 0;
     }
   }
 
-  @media (max-width: $tablet-width) {
-    padding: 0 20px;
+  @media (min-width: $desktop-width) {
+    border: none;
+    margin-right: 35px;
   }
 }
 
 .menu__link {
   display: flex;
   justify-content: center;
-  padding: 22px 5px 24px 5px;
+  padding: 22px 0 23px 0;
   color: $color-link;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: $color-bg-btn;
+      }
+    }
+  }
 
   &--style--light {
     @media (min-width: $desktop-width) {
       color: $color-link-alt;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--active.menu__link--style--light {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        height: 2px;
+        background: $color-link-alt;
+      }
     }
   }
 }

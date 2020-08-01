@@ -2,7 +2,11 @@
   border-bottom: 1px solid $color-catalog-border;
 
   @media (min-width: $tablet-width) {
-    border: none;
+    border: 1px solid $color-bg;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
@@ -10,19 +14,17 @@
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
-  }
+    display: flex;
+    flex-direction: column;
 
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    max-width: $desktop-width;
+    padding: 0;
   }
 }
 
 .more-products__title {
   margin: 0;
-  margin-top: 26px;
-  margin-bottom: 8px;
+  margin-top: 23px;
+  margin-bottom: 9px;
   padding-top: 55px;
   font-family: $title-font;
   font-weight: normal;
@@ -37,9 +39,27 @@
     @include pseudo;
     width: 30px;
     height: 30px;
-    top: 0;
+    top: 2px;
     left: 125px;
     background: url("../img/icon-plus-mobile.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    text-align: center;
+    width: 135px;
+    margin-bottom: 23px;
+
+    @include text(20px, 22px);
+
+    &::before {
+      @include pseudo;
+      width: 60px;
+      height: 60px;
+      top: -54px;
+      left: 39px;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 60 60' style='enable-background:new 0 0 60 60;' xml:space='preserve'%3E%3Cpolygon fill='%23d3d3d3' points='60,29.5 30.5,29.5 30.5,0 29.5,0 29.5,29.5 0,29.5 0,30.5 29.5,30.5 29.5,60 30.5,60 30.5,30.5 60,30.5 '/%3E%3C/svg%3E");
+    }
   }
 }
 
@@ -50,4 +70,19 @@
 
   @include text(12px, 16px);
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    text-align: center;
+    width: 170px;
+    margin-bottom: 88px;
+
+    @include text(16px, 18px);
+  }
+}
+
+.more-products__link {
+  @media (min-width: $tablet-width) {
+    margin: 0 38px 38px;
+  }
 }
