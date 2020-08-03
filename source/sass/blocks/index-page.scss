@@ -3,7 +3,9 @@
     background: url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $color-bg-image 50%, $color-bg-body 50% 100%);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: right -70px top;
     background-size: auto, auto 696px;
   }
 }
+
+//linear-gradient(to left, $color-bg-image 50%, $color-bg-body 50% 100%);

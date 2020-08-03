@@ -11,7 +11,7 @@
   justify-content: center;
   min-height: 289px;
 
-  margin: 39px 20px 35px 20px;
+  margin: 39px 20px 32px 20px;
 
   background-color: $color-bg-btn;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -22,7 +22,7 @@
   @media (min-width: $tablet-width) {
     min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    margin: 30px 30px 30px 30px;
+    margin: 30px 30px 73px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,32 +38,34 @@
 .promotion__item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
+    padding: 0px 125px 0 78px;
     flex-direction: row;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+
   }
 }
 
 .promotion__icon {
   width: 80px;
   height: 78px;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
   fill: $color-text-alt;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,9 +75,20 @@
 }
 
 .promotion__link {
-
+  margin-bottom: 42px;
   text-align: center;
   color: $color-text-alt;
 
   @include text(16px, 20px);
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin-bottom: 42px
+  }
 }

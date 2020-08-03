@@ -2,8 +2,8 @@
   border-bottom: 1px solid $color-catalog-border;
 
   @media (min-width: $tablet-width) {
-    border: 1px solid $color-bg;
-    min-height: 430px;
+    //border: 1px solid $color-bg;
+    //min-height: 430px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -16,7 +16,9 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-
+    justify-content: flex-end;
+    border: 1px solid $color-bg;
+    min-height: 430px;
     padding: 0;
   }
 }
@@ -83,6 +85,7 @@
 
 .more-products__link {
   @media (min-width: $tablet-width) {
-    margin: 0 38px 38px;
+    margin: 0 38px 36px;
   }
+
 }
