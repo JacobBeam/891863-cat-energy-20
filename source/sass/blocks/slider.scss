@@ -1,8 +1,19 @@
 .slider__list {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 620px;
+    margin: 0 auto;
+  }
+}
+
+.slider__before {
+  width: 100%;
 }
 
 .slider__after {
+  width: 100%;
   display: none;
 }
 
@@ -10,11 +21,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -68px;
+  }
 }
 
 .slider__toggle {
   margin: 0;
+  border: none;
+  background-color: transparent;
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;
@@ -22,13 +38,64 @@
   text-align: center;
 
   @include text(16px, 20px);
+
+  &--before {
+    margin-right: 11px;
+    margin-left: 8px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 21px;
+      margin-left: -3px;
+    }
+
+  }
+
+  &--after {
+    margin-left: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text(20px, 30px);
+  }
 }
 
-.slider__controls {
+.slider__range {
+  position: relative;
   width: 84px;
   height: 14px;
   border-radius: 6px;
-  border: 1 solid $color-border-hover;
+  border: 1px solid $color-border-hover;
   background-color: $color-bg-body;
-  margin: 0 15px 0 15px;
+  padding: 4px 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    border-radius: 6px;
+    border: none;
+    background-color: $color-bg-range;
+    padding: 0 6px;
+  }
+
+}
+
+.slider__control {
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-bg-btn;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $color-bg-btn;
+    border: 12px solid $color-text-alt;
+    box-shadow: 0 0 0 1px $color-border-hover,
+      0 1px 3px $color-shadow-range;
+  }
+
 }
