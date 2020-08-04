@@ -34,7 +34,9 @@
 }
 
 .contacts__text {
+  width: 99%;
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
 
@@ -111,7 +113,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/map-desktop.png");
+    background-image: url("../img/map-desktop.png");
     min-height: 400px;
   }
 }

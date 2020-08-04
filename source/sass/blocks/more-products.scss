@@ -1,22 +1,25 @@
 .more-products {
   border-bottom: 1px solid $color-catalog-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
-  @media (min-width: $tablet-width) {
-    //border: 1px solid $color-bg;
-    //min-height: 430px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+  //@media (min-width: $tablet-width) {
+  //  border: 1px solid $color-bg;
+  //  min-height: 430px;
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: flex-end;
+  //}
 }
 
 .more-products__wrapper {
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     border: 1px solid $color-bg;
     min-height: 430px;
     padding: 0;
@@ -35,6 +38,7 @@
 
   @include text(16px, 20px);
   text-align: center;
+  align-self: center;
   position: relative;
 
   &::before {
@@ -42,7 +46,7 @@
     width: 30px;
     height: 30px;
     top: 2px;
-    left: 125px;
+    left: 87px;
     background: url("../img/icon-plus-mobile.svg");
   }
 
@@ -67,7 +71,7 @@
 
 .more-products__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   color: $color-text;
 
   @include text(12px, 16px);
