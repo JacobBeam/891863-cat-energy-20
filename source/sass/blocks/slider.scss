@@ -56,18 +56,28 @@
 
   @include text(16px, 20px);
 
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-bottom: 1px dotted $color-slide-underline;
+
+    &:hover {
+      border-bottom: 1px solid $color-slide-underline-hover;
+    }
+  }
+
+
   &--before {
     margin-right: 11px;
     margin-left: 8px;
 
     @media (min-width: $tablet-width) {
-      margin-right: 21px;
+      margin-right: 25px;
       margin-left: -3px;
     }
   }
 
   &--after {
-    margin-left: 12px;
+    margin-left: 20px;
   }
 
   @media (min-width: $tablet-width) {
@@ -82,7 +92,7 @@
   border-radius: 6px;
   border: 1px solid $color-border-hover;
   background-color: $color-bg-body;
-  padding: 4px 6px;
+  padding: 3px 6px;
 
   @media (min-width: $tablet-width) {
     width: 428px;
@@ -99,6 +109,7 @@
   height: 6px;
   border-radius: 6px;
   background-color: $color-bg-btn;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -111,5 +122,15 @@
     border: 12px solid $color-text-alt;
     box-shadow: 0 0 0 1px $color-border-hover,
       0 1px 3px $color-shadow-range;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $color-border-hover,
+        0 2px 4px $color-shadow-range-hover;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $color-bg-btn,
+        0 3px 5px $color-shadow-range-active;
+    }
   }
 }
