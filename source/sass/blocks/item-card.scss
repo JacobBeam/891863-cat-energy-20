@@ -1,8 +1,7 @@
 .item-card {
   @media (min-width: $tablet-width) {
     min-height: 511px;
-    background: linear-gradient($color-bg-body 0px 81px, $color-bg 81px 100%);
-
+    background: linear-gradient($color-bg-body 0 81px, $color-bg 81px 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

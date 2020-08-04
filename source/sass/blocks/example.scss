@@ -1,19 +1,12 @@
 .example {
-  //временно для сетки
-  //height: 705px;
-
   background: $color-bg-alt;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient($color-bg-body 50%, $color-bg-alt 50% 100%);
-    //временно для сетки
-    //height: 1082px;
+    background: linear-gradient($color-bg-body 57.5%, $color-bg-alt 57.5% 100%);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient($color-bg-body 20%, $color-bg-alt 20% 100%);
-    //временно для сетки
-    //height: 617px;
+    background: linear-gradient($color-bg-body 29.5%, $color-bg-alt 29.5% 100%);
   }
 }
 
@@ -29,17 +22,22 @@
     display: flex;
     justify-content: space-between;
     border-top: none;
-
+    padding-bottom: 49px;
   }
 }
 
 .example__content {
+  min-width: 320px;
+  padding: 0 20px;
+
   @media (min-width: $tablet-width) {
+    padding: 0 30px;
     margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 436px;
+    padding: 0 40px;
+    width: 515px;
     margin-right: 15px;
   }
 }
@@ -59,6 +57,11 @@
     padding-top: 45px;
     margin-bottom: 64px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 58px;
+    margin-bottom: 148px;
+  }
 }
 
 .example__text {
@@ -69,6 +72,11 @@
   @media (min-width: $tablet-width) {
     @include text(16px, 24px);
     margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    margin-bottom: 67px;
   }
 }
 
@@ -117,7 +125,6 @@
       margin-right: 0;
     }
   }
-
 }
 
 .example__description {
@@ -136,6 +143,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: $color-bg-body;
+
     @include text(14px, 14px);
     width: 143px;
     margin-left: 0;
@@ -188,6 +196,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    margin-top: 21px;
   }
 }
 
