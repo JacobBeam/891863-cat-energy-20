@@ -300,8 +300,8 @@
     border-color: $color-border-active;
   }
 
-  &--contacts:active+.form__icon,
-  &--contacts:focus+.form__icon {
+  &--contacts:active + .form__icon,
+  &--contacts:focus + .form__icon {
     fill: $color-bg-btn;
   }
 
@@ -315,7 +315,7 @@
     border-color: $color-border-error;
   }
 
-  &--contacts:focus:invalid+.form__icon {
+  &--contacts:focus:invalid + .form__icon {
     fill: $color-border-error;
   }
 
@@ -370,11 +370,11 @@
   }
 
 
-  &--style--radio:hover:not(:disabled)+.form__label--style--radio::before {
+  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before {
     border: 1px solid $color-checkbox-active;
   }
 
-  &--style--radio:checked:not(:disabled)+.form__label--style--radio::after {
+  &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
     @include pseudo;
     width: 13.5px;
     height: 13.5px;
@@ -384,18 +384,16 @@
     border-radius: 50%;
   }
 
-  &--style--radio:active+.form__label--style--radio {
+  &--style--radio:active + .form__label--style--radio {
     opacity: 0.3;
   }
 
-  &--style--radio:disabled+.form__label--style--radio {
+  &--style--radio:disabled + .form__label--style--radio {
     opacity: 0.3;
   }
-
 
   @media (min-width: $tablet-width) {
-
-    &--style--radio:checked:not(:disabled)+.form__label--style--radio::after {
+    &--style--radio:checked:not(:disabled) + .form__label--style--radio::after {
       @include pseudo;
       width: 18px;
       height: 18px;
@@ -416,11 +414,11 @@
     overflow: hidden;
   }
 
-  &--style--check:hover:not(:disabled)+.form__label--style--check::before {
+  &--style--check:hover:not(:disabled) + .form__label--style--check::before {
     border: 1px solid $color-checkbox-active;
   }
 
-  &--style--check:checked+.form__label--style--check::after {
+  &--style--check:checked + .form__label--style--check::after {
     @include pseudo;
     width: 18px;
     height: 14px;
@@ -429,16 +427,16 @@
     background-image: url("../img/check.svg");
   }
 
-  &--style--check:active+.form__label--style--check {
+  &--style--check:active + .form__label--style--check {
     opacity: 0.3;
   }
 
-  &--style--check:disabled+.form__label--style--check {
+  &--style--check:disabled + .form__label--style--check {
     opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
-    &--style--check:checked+.form__label--style--check::after {
+    &--style--check:checked + .form__label--style--check::after {
       @include pseudo;
       width: 18px;
       height: 14px;
@@ -453,7 +451,7 @@
 .form__input-error {
   border-color: $color-border-error;
 
-  &+.form__icon {
+  & + .form__icon {
     fill: $color-border-error;
   }
 }
