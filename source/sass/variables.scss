@@ -16,6 +16,10 @@ $color-bg-alt:#eaeaea;
 $color-bg-body:#ffffff;
 $color-bg-btn: #68b738;
 $color-bg-btn-hover: #5eaa2f;
+$color-bg-range:#dcdcdc;
+$color-shadow-range: rgba(0, 0, 0, 0.16);
+$color-shadow-range-hover: rgba(0, 0, 0, 0.19);
+$color-shadow-range-active: rgba(0, 0, 0, 0.2);
 $color-bg-image:#65a936;
 $color-border:#e7e7e7;
 $color-border-hover:#cdcdcd;
@@ -28,7 +32,9 @@ $color-link-border:#e6e6e6;
 $color-catalog-border:#ebebeb;
 $color-card-title:#222222;
 $social-link:#666666;
-
+$color-slide-underline: rgba(0, 0, 0, 0.24);
+$color-slide-underline-hover: rgba(0, 0, 0, 0.4);
+$color-checkbox-active:#bababa;
 
 $main-font: "Arial","sans-serif";
 $title-font: "Oswald","Arial","sans-serif";

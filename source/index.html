@@ -147,19 +147,20 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__wrapper ">
-        <div class="example__content container">
+      <div class="example__wrapper">
+        <div class="example__content">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
             Energy&nbsp;Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и <nobr>по-прежнему</nobr>
+            спит
             по 16
             часов в день.
           </p>
           <div class="example__stats">
             <dl class="example__row">
               <div class="example__column">
-                <dt class="example__description">снижение<br> веса</dt>
+                <dt class="example__description">снижение веса</dt>
                 <dd class="example__value">5 КГ</dd>
               </div>
               <div class="example__column">
@@ -170,18 +171,26 @@
             <p class="example__cost">Затраты на питание: <span class="example__price">15 000 РУБ.</span> </p>
           </div>
         </div>
-        <div class="example__image slider container">
+        <div class="example__image slider">
           <!--заменить на кнопки-див-->
           <div class="slider__list">
-            <img class="slider__before" src="img/before-mobile@1x.png" alt="Упитанный кот" width="311" height="232">
-            <img class="slider__after" src="img/after-mobile@1x.png" alt="Упитанный кот" width="251" height="240">
+            <picture>
+              <source srcset="img/image_cat_desktop.png" media="(min-width: 1300px)">
+              <source srcset="img/image_cat_tablet.png" media="(min-width: 767px)">
+              <img class="slider__before" src="img/before-mobile 1.png" alt="Упитанный кот" width="311" height="232">
+            </picture>
+            <picture>
+              <source srcset="img/image_cat_desktop.png" media="(min-width: 1300px)">
+              <source srcset="img/image_cat_tablet.png" media="(min-width: 767px)">
+              <img class="slider__after" src="img/after-mobile 1.png" alt="Худой кот" width="251" height="240">
+            </picture>
           </div>
           <div class="slider__toggles">
-            <span class="slider__toggle slider__toggle--current">Было</span>
-            <label class="visually-hidden" for="range-cat">Изменения кота</label>
-            <input class="slider__controls" type="range" id="range" name="range-cat" min="1" max="100" value="1"
-              step="1"></input>
-            <span class="slider__toggle">Стало</span>
+            <button class="slider__toggle slider__toggle--before slider__toggle--current">Было</button>
+            <div class="slider__range " style="margin-left: 0%">
+              <div class="slider__control" style="left: 46%"></div>
+            </div>
+            <button class="slider__toggle slider__toggle--after">Стало</button>
           </div>
         </div>
       </div>
@@ -190,10 +199,10 @@
   <footer class="footer">
     <section class="footer__contacts contacts ">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper contacts__wrapper--theme--light">
-        <div class="contacts__text container">
+      <div class="contacts__wrapper contacts__wrapper--theme--light container">
+        <div class="contacts__text">
           <h3 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h3>
-          <p class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+          <p class="contacts__addres">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
         </div>
       </div>
       <div class="contacts__map">
@@ -205,6 +214,7 @@
         <a class="footer__link">
           <img src="img/logo-footer.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
+
       </div>
       <div class="footer__social social">
         <ul class="social__list">

@@ -1,37 +1,45 @@
 .example {
-  //временно для сетки
-  height: 705px;
-
   background: $color-bg-alt;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient($color-bg-body 50%, $color-bg-alt 50% 100%);
-    //временно для сетки
-    height: 1082px;
+    background: linear-gradient($color-bg-body 57.5%, $color-bg-alt 57.5% 100%);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient($color-bg-body 20%, $color-bg-alt 20% 100%);
-    //временно для сетки
-    height: 617px;
+    background: linear-gradient($color-bg-body 29.5%, $color-bg-alt 29.5% 100%);
   }
 }
 
 .example__wrapper {
+  padding-bottom: 35px;
+
   @media (min-width: $tablet-width) {
     border-top: 1px solid $color-link-border;
+    padding-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
     border-top: none;
+    padding-bottom: 49px;
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 }
 
 .example__content {
+  min-width: 320px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 25px;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 436px;
+    padding: 0 40px;
+    width: 515px;
     margin-right: 15px;
   }
 }
@@ -45,35 +53,62 @@
   color: $color-text-title;
 
   @include text(36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    @include text(60px, 60px);
+    padding-top: 45px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 58px;
+    margin-bottom: 148px;
+  }
 }
 
 .example__text {
   margin: 0;
   margin-bottom: 25px;
   color: $color-text-paragraph;
+
+  @media (min-width: $tablet-width) {
+    @include text(16px, 24px);
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    margin-bottom: 67px;
+  }
 }
 
 .example__stats {
+  margin-bottom: 42px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
 .example__row {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    width: 370px;
+    width: 366px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
   }
 }
 
@@ -83,6 +118,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 41px;
+    margin-bottom: 25px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .example__description {
@@ -92,7 +136,7 @@
   margin-top: -9px;
   margin-left: -2px;
   padding: 0;
-  width: 87px;
+  width: 80px;
   color: $color-text-paragraph;
   background-color: $color-bg-alt;
   text-align: center;
@@ -101,6 +145,11 @@
 
   @media (min-width: $tablet-width) {
     background-color: $color-bg-body;
+
+    @include text(14px, 14px);
+    width: 143px;
+    margin-left: 0;
+    padding: 0 8px;
   }
 
   @media (min-width: $desktop-width) {
@@ -110,7 +159,7 @@
 
 .example__value {
   margin: 0;
-  padding: 15px 0;
+  padding: 14px 5px 15px 5px;
   width: 124px;
   border: 1px solid $color-border-hover;
   font-family: $title-font;
@@ -120,11 +169,17 @@
   text-align: center;
 
   @include text(24px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include text(30px, 37px);
+    padding: 16px 5px;
+    width: 162px;
+  }
 }
 
 .example__cost {
   margin: 0;
-  margin-bottom: 35px;
+
   font-family: $title-font;
   font-weight: normal;
   color: $color-text-title;
@@ -134,22 +189,30 @@
   @include text(14px, 20px);
 
   @media (min-width: $tablet-width) {
+    @include text(20px, 20px);
     display: flex;
     flex-direction: column;
     text-align: end;
+    margin-top: 12px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    margin-top: 21px;
   }
 }
 
 .example__price {
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     margin-left: 63px;
   }
 }
 
 .example__image {
-  text-align: center;
+  //text-align: center;
 }

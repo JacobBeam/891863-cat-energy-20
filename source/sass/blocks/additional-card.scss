@@ -1,3 +1,33 @@
+.additional-card {
+  border-top: 1px solid $color-border-hover;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  &:last-child {
+    border-bottom: 1px solid $color-border-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-border-hover;
+    padding: 25px 37px 27px 37px;
+    margin-top: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding: 15px 0 16px 0;
+    border: none;
+    margin-top: 0;
+    border-top: 1px solid $color-border-hover;
+
+    &:last-child {
+      border-bottom: 1px solid $color-border-hover;
+    }
+  }
+}
+
 .additional-card__title {
   margin: 0;
   margin-bottom: 10px;
@@ -8,8 +38,15 @@
 
   @include text(16px, 16px);
 
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    @include text(20px, 20px);
+  }
+
   @media (min-width: $desktop-width) {
-    width: 245px;
+    width: 300px;
+    margin-right: 31px;
   }
 }
 
@@ -17,6 +54,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    align-items: center;
+    margin-bottom: 0;
   }
 }
 
@@ -24,7 +68,7 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 9px;
   margin-bottom: 15px;
   color: $color-text-paragraph;
 
@@ -33,10 +77,15 @@
   @media (min-width: $tablet-width) {
     width: 50%;
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+
+    @include text(16px, 20px);
   }
 
   @media (min-width: $desktop-width) {
-    width: 280px;
+
+    justify-content: flex-start;
   }
 }
 
@@ -44,8 +93,17 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+
     text-align: end;
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    margin-right: 45px;
+    text-align: start;
   }
 }
 
@@ -55,8 +113,16 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    min-width: 94px;
     text-align: end;
+    padding-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 50px;
+    padding-top: 5px;
+    text-align: start;
+    margin-right: 10px;
   }
 }
 
