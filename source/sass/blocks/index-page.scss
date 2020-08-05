@@ -3,8 +3,8 @@
     background: url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $color-bg-image 50%, $color-bg-body 50% 100%);
     background-repeat: no-repeat;
-    background-position: right -70px top;
-    background-size: auto, auto 696px;
+    background-position: right top, top right;
+    background-size: auto, auto 694px;
   }
 }
 
