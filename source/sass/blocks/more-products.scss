@@ -81,7 +81,7 @@
     align-self: center;
     text-align: center;
     width: 170px;
-    margin-bottom: 88px;
+    margin-bottom: 86px;
 
     @include text(16px, 18px);
   }
@@ -90,5 +90,9 @@
 .more-products__link {
   @media (min-width: $tablet-width) {
     margin: 0 38px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 38px 38px;
   }
 }
