@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     border-top: none;
-    padding-bottom: 49px;
+    padding-bottom: 28px;
     max-width: $desktop-width;
     margin: 0 auto;
   }
@@ -34,7 +34,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    margin-bottom: 25px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -83,7 +83,7 @@
 }
 
 .example__stats {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -211,8 +211,4 @@
     margin-top: 0;
     margin-left: 63px;
   }
-}
-
-.example__image {
-  //text-align: center;
 }
