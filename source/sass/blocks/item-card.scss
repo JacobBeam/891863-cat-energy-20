@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 40px;
   }
 }
 
@@ -12,48 +13,51 @@
   display: flex;
   padding: 0 20px 0 20px;
   justify-content: center;
-  margin-bottom: 19px;
+  //margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
-    padding: 0 36px 0 36px;
+    padding: 0 0 0 0;
     align-items: center;
     margin-bottom: 0;
   }
 }
 
 .item-card__image {
-  display: flex;
+
+  //display: flex;
   //justify-content: center;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  padding-top: 1px;
+  //width: 140px;
+  //padding-top: 1px;
 
   @media (min-width: $tablet-width) {
     //align-self: center;
-    width: 168px;
+    width: 324px;
     position: relative;
     //top: -79px;
-    margin-bottom: 18px;
-    padding-top: 5px;
+
+    margin-bottom: 32px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 172px;
+    width: 245px;
     //top: -80px;
     margin-bottom: 22px;
   }
 }
 
 .item-card__info {
-  margin-top: 22px;
+  padding-top: 20px;
   min-width: 140px;
 
 
   @media (min-width: $tablet-width) {
-    margin-top: 20px;
-    margin-bottom: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 36px 0 36px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -62,24 +66,24 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 19px;
-    margin-bottom: 32px;
   }
 }
 
 .item-card__picture {
   //width: 140px;
+  display: block;
   object-fit: cover;
 
 
   @media (min-width: $tablet-width) {
-    width: 168px;
-    height: 200px;
-    object-fit: none;
+    width: 324px;
+
+    object-fit: contain;
   }
 
-  @media (min-width: $tablet-width) {
-    width: 172px;
-    height: 198px;
+  @media (min-width: $desktop-width) {
+    width: 245px;
+
     object-fit: none;
   }
 }
@@ -102,7 +106,7 @@
     align-self: center;
     text-align: center;
     padding-left: 4px;
-    margin-top: -5px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -117,6 +121,10 @@
   width: 100%;
   padding-top: 11px;
   margin-left: -2px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 15px;
@@ -162,15 +170,10 @@
   }
 }
 
-.item-card__link {
-  display: flex;
-  margin-top: auto;
-}
-
 .item-card__order {
-  margin: -4px 20px 18px;
+  margin: 0 20px 0;
 
   @media (min-width: $tablet-width) {
-    margin: -1px 38px 40px;
+    margin: 0 36px 0 39px;
   }
 }

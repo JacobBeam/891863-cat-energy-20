@@ -1,6 +1,7 @@
 .about__wrapper {
   @media (min-width: $tablet-width) {
     padding-bottom: 43px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,18 +75,42 @@
 
   &--leaf::before {
     background: $color-bg-btn url("../img/advantage-leaf@1x.png") center no-repeat;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-bg-btn url("../img/advantage-leaf@2x.png") center no-repeat;
+      background-size: 50px 50px;
+    }
   }
 
   &--tub::before {
     background: $color-bg-btn url("../img/advantage-powder@1x.png") center no-repeat;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-bg-btn url("../img/advantage-powder@2x.png") center no-repeat;
+      background-size: 50px 50px;
+    }
   }
 
   &--eat::before {
     background: $color-bg-btn url("../img/advantage-dining@1x.png") center no-repeat;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-bg-btn url("../img/advantage-dining@2x.png") center no-repeat;
+      background-size: 50px 50px;
+    }
   }
 
   &--alarm::before {
     background: $color-bg-btn url("../img/advantage-clock@1x.png") center no-repeat;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-bg-btn url("../img/advantage-clock@2x.png") center no-repeat;
+      background-size: 50px 50px;
+    }
   }
 
   @media (min-width: $tablet-width) {

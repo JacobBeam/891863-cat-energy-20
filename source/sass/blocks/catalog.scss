@@ -53,7 +53,7 @@
     grid-column-gap: 80px;
     //grid-row-gap: 63px;
     padding: 0 40px;
-    grid-row-gap: 58px;
+    grid-row-gap: 57px;
     margin: 0 auto;
     max-width: $desktop-width;
   }
@@ -61,7 +61,7 @@
 
 .catalog__item {
   border-top: 1px solid $color-catalog-border;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   &:last-child {
     padding-bottom: 24px;

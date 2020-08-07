@@ -1,18 +1,28 @@
+//.slider {
+//  @media (min-width: $tablet-width) {
+
+//    margin: 0 auto;
+//  }
+//}
+
 .slider__list {
   margin-bottom: 28px;
   text-align: center;
-  margin-left: -11px;
+
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    height: 620px;
-    margin: 0 auto;
+    width: 690px;
+    //height: 517px;
+    //margin: 0 auto;
+    margin-left: 48px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
     width: 690px;
-    height: 656px;
-    margin: 0 auto;
+    //height: 656px;
+    //margin: 0 auto;
+    margin: 0 0 35px 0;
   }
 }
 
@@ -37,11 +47,11 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin-top: -68px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: -101px;
+    //margin-top: -101px;
     margin-left: 39px;
   }
 }

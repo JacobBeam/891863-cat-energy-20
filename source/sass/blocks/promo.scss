@@ -1,20 +1,18 @@
 .promo {
-
   background: url("../img/index-background-mobile@1x.jpg"), linear-gradient($color-bg-image 305px, $color-bg-body 305px 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: top center, top left;
 
-  @media (min-width: $tablet-width) {
-    background: none;
-    //background: url("../img/index-can-tablet@1x.jpg");
-    //background-repeat: no-repeat;
-    //background-position: right bottom;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/index-background-mobile@2x.jpg"), linear-gradient($color-bg-image 305px, $color-bg-body 305px 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, top left;
+    background-size: 320px 305px, auto;
   }
 
-  @media (min-width: $desktop-width) {
-    //background: url("../img/index-can-desktop@1x.png");
-    //background-repeat: no-repeat;
-    //background-position: top center;
+  @media (min-width: $tablet-width) {
+    background: none;
   }
 }
 
