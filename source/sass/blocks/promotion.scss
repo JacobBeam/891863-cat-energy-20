@@ -68,8 +68,8 @@
 }
 
 .promotion__icon {
-  width: 80px;
-  height: 78px;
+  width: 78px;
+  height: 64px;
   margin-bottom: 50px;
   fill: $color-text-alt;
 
@@ -80,7 +80,7 @@
 
   @media (min-width: $desktop-width) {
 
-    margin-bottom: 48px;
+    margin-bottom: 56px;
   }
 }
 
