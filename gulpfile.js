@@ -23,12 +23,29 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//Max Stiles
+
+const maxstyles = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+}
+
+exports.maxstyles = maxstyles;
 
 // WebP
 
@@ -138,6 +155,7 @@ exports.build = gulp.series(
   clean,
   copy,
   styles,
+  maxstyles,
   sprite,
   html
 )
