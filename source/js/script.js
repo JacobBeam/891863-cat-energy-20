@@ -19,17 +19,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     function init() {
       map = new ymaps.Map("map", { // в кавычках id элемента куда загружается карта
-        center: [59.9386332382438, 30.32308101654053],
+        center: [59.93862517669296, 30.322941541671756],
         // координаты центра фрагмента карты, подобрать можно на https://vk.cc/9n163G
         zoom: 16,
         controls: []
       });
-      var placemark = new ymaps.Placemark([59.9386332382438, 30.32308101654053], { // координаты метки
-        hintContent: "ул. Большая Конюшенная, д. 19/8",
+      var placemark = new ymaps.Placemark([59.93862517669296, 30.322941541671756], { // координаты метки
+        hintContent: "ул. Большая Конюшенная, д. 19/8"
+      }, {
         iconLayout: "default#image",
         iconImageHref: "../img/map-pin.png", // иконка метки
-        iconImageSize: [56, 52], // размер метки
-
+        iconImageSize: [56, 52],
+        iconImageOffset: [-25, -55] // размер метки
       });
       map.geoObjects.add(placemark);
     }
