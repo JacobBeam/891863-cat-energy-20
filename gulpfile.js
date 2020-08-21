@@ -8,7 +8,9 @@ const sync = require("browser-sync").create();
 const webp = require("gulp-webp");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
-
+const csso = require("gulp-csso");
+const imagemin = require('gulp-imagemin');
+const del = require("del");
 
 // Styles
 
@@ -20,12 +22,30 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//Max Stiles
+
+const maxstyles = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+}
+
+exports.maxstyles = maxstyles;
 
 // WebP
 
@@ -41,13 +61,29 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 
 exports.sprite = sprite;
 
+// Images
 
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,svg,png}")
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"))
+}
+
+exports.images = images;
 // Server
 
 const server = (done) => {
@@ -74,3 +110,52 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+      "source/fonts/**/*.{woff,woff2}",
+      "source/img/**",
+      "source/js/**",
+      "source/*.ico"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy
+
+// Html
+
+const html = () => {
+  return gulp.src([
+      "source/*.html"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+};
+
+exports.html = html
+
+// Del
+
+const clean = () => {
+  return del("build");
+}
+exports.clean = clean
+
+//Build
+
+
+exports.build = gulp.series(
+  clean,
+  copy,
+  styles,
+  maxstyles,
+  sprite,
+  html
+)
