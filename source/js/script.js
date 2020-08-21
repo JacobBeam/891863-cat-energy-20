@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // координаты центра фрагмента карты, подобрать можно на https://vk.cc/9n163G
         zoom: 16,
         controls: []
+      }, {
+        autoFitToViewport: "always"
       });
       var placemark = new ymaps.Placemark([59.93862517669296, 30.322941541671756], { // координаты метки
         hintContent: "ул. Большая Конюшенная, д. 19/8"

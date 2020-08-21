@@ -95,7 +95,7 @@
   background-size: 56px 52px, cover;
   background-position: center, center;
   min-width: 320px;
-  min-height: 362px;
+  height: 362px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
