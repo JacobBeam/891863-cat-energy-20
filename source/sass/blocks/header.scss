@@ -73,6 +73,10 @@
   position: relative;
   margin-right: 20px;
 
+  &--nojs {
+    display: none;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -86,6 +90,7 @@
 
   &::before {
     top: 0;
+    height: 2px;
   }
 
   &::after {

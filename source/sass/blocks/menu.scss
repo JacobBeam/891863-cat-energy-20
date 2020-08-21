@@ -5,6 +5,10 @@
 
   @include text(20px, 20px);
 
+  &--nojs {
+    display: block;
+  }
+
   &--opened {
     display: block;
   }
