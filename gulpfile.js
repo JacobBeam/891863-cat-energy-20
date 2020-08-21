@@ -89,7 +89,7 @@ exports.images = images;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -100,16 +100,7 @@ const server = (done) => {
 
 exports.server = server;
 
-// Watcher
 
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 
 // Copy
@@ -159,3 +150,21 @@ exports.build = gulp.series(
   sprite,
   html
 )
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles", "maxstyles"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+}
+
+exports.default = gulp.series(
+  clean,
+  copy,
+  styles,
+  maxstyles,
+  sprite,
+  html,
+  server,
+  watcher
+);
