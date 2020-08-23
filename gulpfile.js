@@ -22,6 +22,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -30,22 +32,6 @@ const styles = () => {
 }
 
 exports.styles = styles;
-
-//Max Stiles
-
-const maxstyles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-}
-
-exports.maxstyles = maxstyles;
 
 // WebP
 
@@ -158,7 +144,6 @@ exports.build = gulp.series(
   clean,
   copy,
   styles,
-  maxstyles,
   sprite,
   html,
   js
@@ -167,7 +152,7 @@ exports.build = gulp.series(
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles", "maxstyles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
   gulp.watch("source/js/**/*.js", gulp.series("js")).on("change", sync.reload);
 }
@@ -176,7 +161,6 @@ exports.default = gulp.series(
   clean,
   copy,
   styles,
-  maxstyles,
   sprite,
   html,
   js,

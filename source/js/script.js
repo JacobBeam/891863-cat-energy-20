@@ -38,3 +38,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+
+
+if (document.body.classList.contains("index-page")) {
+
+  var imageBefore = document.querySelector(".slider__before")
+  var imageAfter = document.querySelector(".slider__after")
+  var buttonBefore = document.querySelector(".slider__toggle--before")
+  var buttonAfter = document.querySelector(".slider__toggle--after")
+
+  buttonBefore.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    imageAfter.classList.remove("slider__after--current");
+    imageBefore.classList.add("slider__before--current");
+  })
+
+  buttonAfter.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    imageBefore.classList.remove("slider__before--current");
+    imageAfter.classList.add("slider__after--current");
+  })
+}

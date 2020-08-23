@@ -36,6 +36,10 @@
   @media (min-width: $tablet-width) {
     padding-right: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 510px;
+  }
 }
 
 .header__logo {
