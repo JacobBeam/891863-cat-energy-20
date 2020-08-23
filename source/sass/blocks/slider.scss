@@ -29,6 +29,8 @@
 
 .slider__before {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
 
   &--current {
     display: block;
@@ -41,6 +43,8 @@
 
 .slider__after {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
 
   &--current {
     display: block;
