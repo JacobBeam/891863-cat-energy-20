@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         hintContent: "ул. Большая Конюшенная, д. 19/8"
       }, {
         iconLayout: "default#image",
-        iconImageHref: "../img/map-pin.png", // иконка метки
+        iconImageHref: "img/map-pin.png", // иконка метки
         iconImageSize: [56, 52],
         iconImageOffset: [-25, -55] // размер метки
       });
