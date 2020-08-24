@@ -1,7 +1,8 @@
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  //align-items: center;
+  //justify-content: center;
   padding: 7px;
   color: $color-text-alt;
   text-transform: uppercase;
@@ -37,15 +38,15 @@
     padding: 11px 5px;
 
     @media (min-width: $tablet-width) {
-      @include text(20px, 0);
+      @include text(20px, 28px);
       width: 244px;
-      padding: 28px 5px;
+      padding: 13px 5px;
     }
   }
 
   &--size-product {
-    @include text(16px, 0);
-    padding: 20px 5px;
+    @include text(16px, 20px);
+    padding: 10px 5px;
   }
 
   &--size--form {
@@ -54,8 +55,8 @@
     border: none;
 
     @media (min-width: $tablet-width) {
-      @include text(20px, 0);
-      padding: 26px 5px;
+      @include text(20px, 24px);
+      padding: 14px 5px;
     }
   }
 }

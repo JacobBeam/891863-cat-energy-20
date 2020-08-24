@@ -22,6 +22,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -30,22 +32,6 @@ const styles = () => {
 }
 
 exports.styles = styles;
-
-//Max Stiles
-
-const maxstyles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-}
-
-exports.maxstyles = maxstyles;
 
 // WebP
 
@@ -89,7 +75,7 @@ exports.images = images;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -100,16 +86,7 @@ const server = (done) => {
 
 exports.server = server;
 
-// Watcher
 
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 
 // Copy
@@ -118,7 +95,7 @@ const copy = () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
-      "source/js/**",
+      //"source/js/**",
       "source/*.ico"
     ], {
       base: "source"
@@ -127,6 +104,18 @@ const copy = () => {
 };
 
 exports.copy = copy
+
+// JS
+const js = () => {
+  return gulp.src([
+      "source/js/**/*.js"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+};
+
+exports.js = js
 
 // Html
 
@@ -155,7 +144,26 @@ exports.build = gulp.series(
   clean,
   copy,
   styles,
-  maxstyles,
   sprite,
-  html
+  html,
+  js
 )
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("js")).on("change", sync.reload);
+}
+
+exports.default = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite,
+  html,
+  js,
+  server,
+  watcher
+);

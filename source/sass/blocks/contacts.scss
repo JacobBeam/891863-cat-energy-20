@@ -42,7 +42,10 @@
     width: 570px;
     margin-bottom: -201px;
     top: 95px;
-    position: relative;
+    //position: relative;
+    position: absolute;
+    max-height: 250px;
+    overflow: auto;
     z-index: 1;
     padding: 65px 90px 58px 76px;
   }
@@ -95,7 +98,7 @@
   background-size: 56px 52px, cover;
   background-position: center, center;
   min-width: 320px;
-  min-height: 362px;
+  height: 362px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");

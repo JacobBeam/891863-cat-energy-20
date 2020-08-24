@@ -5,6 +5,10 @@
 
   @include text(20px, 20px);
 
+  &--nojs {
+    display: block;
+  }
+
   &--opened {
     display: block;
   }
@@ -91,7 +95,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     &--active.menu__link--style--light {
       &::after {
         content: "";

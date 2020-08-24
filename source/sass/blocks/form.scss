@@ -1,6 +1,6 @@
 .form {
   @media (min-width: $tablet-width) {
-    padding-bottom: 69px;
+    padding-bottom: 73px;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,7 +26,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 0 0 0;
-    margin: 0 0 19px 0;
+    margin: 0 0 20px 0;
 
     &--position--row {
       margin-bottom: 0;
@@ -284,6 +284,11 @@
   padding: 16px 10px 10px 14px;
   flex-grow: 1;
 
+  &[type="number"] {
+    appearance: textfield;
+    /* Firefox */
+  }
+
   &--theme--light {
     border: 1px solid $color-border;
 
@@ -370,7 +375,8 @@
   }
 
 
-  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before {
+  &--style--radio:hover:not(:disabled) + .form__label--style--radio::before,
+  &--style--radio:focus:not(:disabled) + .form__label--style--radio::before {
     border: 1px solid $color-checkbox-active;
   }
 
@@ -414,7 +420,8 @@
     overflow: hidden;
   }
 
-  &--style--check:hover:not(:disabled) + .form__label--style--check::before {
+  &--style--check:hover:not(:disabled) + .form__label--style--check::before,
+  &--style--check:focus:not(:disabled) + .form__label--style--check::before {
     border: 1px solid $color-checkbox-active;
   }
 
@@ -499,10 +506,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 51px;
+    margin-bottom: 49px;
 
     &--additional {
-      margin-bottom: 33px;
+      margin-bottom: 30px;
+      margin-top: 22px;
     }
   }
 
@@ -522,7 +530,7 @@
   background: $color-bg-body;
 
   margin: 0 79px 0 -20px;
-  transform: translateY(-61%);
+  transform: translateY(-16px);
   padding: 0 20px;
   font-family: $title-font;
   font-weight: normal;
@@ -531,21 +539,22 @@
   @include text(24px, 26px);
 
   &--position {
-    transform: translateY(-37%);
+    transform: translateY(-18px);
   }
 
   @media (min-width: $tablet-width) {
     @include text(36px, 36px);
     margin: 0 0 0 0;
     padding: 0 46px 0 39px;
+    transform: translateY(-24px);
 
-    &--position {
-      transform: translateY(-67%);
-    }
+    //&--position {
+    //  transform: translateY(-67%);
+    //}
   }
 
   @media (min-width: $desktop-width) {
-    transform: translateY(-70%);
+    transform: translateY(-26px);
 
     @include text(36px, 36px);
     padding: 0 40px;

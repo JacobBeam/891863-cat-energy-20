@@ -36,6 +36,10 @@
   @media (min-width: $tablet-width) {
     padding-right: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 510px;
+  }
 }
 
 .header__logo {
@@ -73,6 +77,10 @@
   position: relative;
   margin-right: 20px;
 
+  &--nojs {
+    display: none;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -86,6 +94,7 @@
 
   &::before {
     top: 0;
+    height: 2px;
   }
 
   &::after {
