@@ -160,7 +160,7 @@
               <div class="form__wrap">
                 <label class="form__label form__label--phone" for="phone">Телефон:*</label>
                 <input class="form__input form__input--contacts" type="tel" name="phone" id="phone"
-                  placeholder="8 (960) 900-60-90" required>
+                  placeholder="8 (960) 900-60-90" pattern="8 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                 <svg class="form__icon form__icon--phone" width="20px" height="20px">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -179,9 +179,9 @@
           <fieldset class="form__fieldset form__fieldset--position--row">
             <div class="form__container form__container--about">
               <div class="form__wrap">
+                <label class="visually-hidden" for="comment">Повадки кота</label>
                 <textarea class="form__input form__input--textarea form__input--theme--light" rows="4" name="comment"
-                  id="comment" placeholder="Расскажите обо всех повадках кота"
-                  aria-label="Опишите повадки кота"></textarea>
+                  id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
           </fieldset>
