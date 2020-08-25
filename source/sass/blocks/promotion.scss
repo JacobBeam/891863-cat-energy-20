@@ -51,9 +51,10 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 125px 0 78px;
+    padding: 15px 125px 15px 78px;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
@@ -61,6 +62,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    padding-top: 30px;
+    padding-bottom: 0;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -70,7 +73,7 @@
 .promotion__icon {
   width: 78px;
   height: 64px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   fill: $color-text-alt;
 
   @media (min-width: $tablet-width) {
@@ -88,6 +91,9 @@
   margin-bottom: 42px;
   text-align: center;
   color: $color-text-alt;
+  padding-left: 43px;
+  padding-right: 45px;
+
 
   @include text(16px, 20px);
 
@@ -95,10 +101,16 @@
     text-align: left;
     margin-top: 5px;
     margin-bottom: 0;
+    padding-left: 20px;
+  padding-right: 0;
+    width: 181px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: center;
     margin-bottom: 42px;
+    padding-left:25px;
+    padding-right:25px;
+    width: 245px;
   }
 }
