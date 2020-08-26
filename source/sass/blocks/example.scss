@@ -2,11 +2,26 @@
   background: $color-bg-alt;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient($color-bg-body 57.5%, $color-bg-alt 57.5% 100%);
+    background: linear-gradient(to top, $color-bg-alt 461px, $color-bg-body 461px 100%);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient($color-bg-body 29.5%, $color-bg-alt 29.5% 100%);
+    //background: linear-gradient($color-bg-body 29.5%, $color-bg-alt 29.5% 100%);
+    //background: linear-gradient(to left, $color-bg-alt 393px, $color-bg 393px 100%);
+    background: linear-gradient(to left, $color-bg-alt 27.3%, $color-bg 27.3% 100%);
+
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: auto 462px;
+
+  }
+
+  // перестроение для градиентного десктопа
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to left, $color-bg-alt 50vw, $color-bg 50vw 100%);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: auto 462px;
   }
 }
 
@@ -26,6 +41,11 @@
     max-width: $desktop-width;
     margin: 0 auto;
     margin-top: 25px;
+  }
+
+  // перестроение для градиентного десктопа
+  @media (min-width: $desktop-width) {
+    padding-bottom: 28px;
   }
 }
 
@@ -154,7 +174,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $color-bg-alt;
+    background-color: $color-bg;
   }
 }
 
@@ -211,5 +231,6 @@
   @media (min-width: $desktop-width) {
     margin-top: 0;
     margin-left: 63px;
+    white-space: nowrap;
   }
 }
