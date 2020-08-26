@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     function init() {
       map = new ymaps.Map("map", { // в кавычках id элемента куда загружается карта
         center: [59.93862517669296, 30.322941541671756],
-        // координаты центра фрагмента карты, подобрать можно на https://vk.cc/9n163G
+        // координаты центра фрагмента карты
         zoom: 16,
         controls: []
       }, {
@@ -40,29 +40,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
-//if (document.body.classList.contains("index-page")) {
-
-//  var imageBefore = document.querySelector(".slider__before")
-//  var imageAfter = document.querySelector(".slider__after")
-//  var buttonBefore = document.querySelector(".slider__toggle--before")
-//  var buttonAfter = document.querySelector(".slider__toggle--after")
-
-//  buttonBefore.addEventListener("click", function (evt) {
-//    evt.preventDefault();
-//    imageAfter.classList.remove("slider__after--current");
-//    imageBefore.classList.add("slider__before--current");
-//  })
-
-//  buttonAfter.addEventListener("click", function (evt) {
-//    evt.preventDefault();
-//    imageBefore.classList.remove("slider__before--current");
-//    imageAfter.classList.add("slider__after--current");
-//  })
-//}
-
 
 if (document.documentElement.clientWidth > 767) {
-  let thumb = slider.querySelector('.slider__control');
+  let thumb = slider.querySelector(".slider__control");
 
   thumb.onmousedown = function (event) {
     event.preventDefault(); // предотвратить запуск выделения (действие браузера)
@@ -70,8 +50,8 @@ if (document.documentElement.clientWidth > 767) {
     let shiftX = event.clientX - thumb.getBoundingClientRect().left;
     // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
 
     function onMouseMove(event) {
       let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
@@ -85,7 +65,7 @@ if (document.documentElement.clientWidth > 767) {
         newLeft = rightEdge;
       }
 
-      thumb.style.left = (newLeft / rightEdge) * 94.5 + '%';
+      thumb.style.left = (newLeft / rightEdge) * 94.5 + "%";
       slideBefore.style.width = 170 + newLeft + "px";
 
 
@@ -96,8 +76,8 @@ if (document.documentElement.clientWidth > 767) {
     }
 
     function onMouseUp() {
-      document.removeEventListener('mouseup', onMouseUp);
-      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+      document.removeEventListener("mousemove", onMouseMove);
     }
 
   };
@@ -105,44 +85,86 @@ if (document.documentElement.clientWidth > 767) {
   thumb.ondragstart = function () {
     return false;
   }
-
-
-  let buttonBefore = document.querySelector(".slider__toggle--before")
-  let buttonAfter = document.querySelector(".slider__toggle--after")
-
-  buttonBefore.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    slideBefore.style.width = 100 + "%"
-
-    thumb.style.left = 94.5 + "%";
-  })
-
-  buttonAfter.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    slideBefore.style.width = 0 + "%"
-    thumb.style.left = 0 + 'px';
-
-
-  })
 }
 
-if (document.documentElement.clientWidth < 768) {
+var doit;
+var thumb = slider.querySelector(".slider__control");
+var imageBefore = document.querySelector(".slider__before")
+var imageAfter = document.querySelector(".slider__after")
+var buttonBefore = document.querySelector(".slider__toggle--before")
+var buttonAfter = document.querySelector(".slider__toggle--after")
 
-  let buttonBefore = document.querySelector(".slider__toggle--before")
-  let buttonAfter = document.querySelector(".slider__toggle--after")
-  let imageBefore = document.querySelector(".slider__before")
-  let imageAfter = document.querySelector(".slider__after")
-  let thumb = slider.querySelector('.slider__control');
+function sliderAnimatingMobile() {
+  slideBefore.style.width = "";
+  thumb.style.left = "";
+  imageBefore.style.display = "";
+  imageAfter.style.display = "";
 
-  buttonBefore.addEventListener("click", function (evt) {
-    imageBefore.style.display = "block"
-    imageAfter.style.display = "none"
-    thumb.style.left = 6 + "px"
-  })
+  function clickBeforeMobile() {
+    imageBefore.style.display = "block";
+    imageAfter.style.display = "none";
+    thumb.style.left = 6 + "px";
+  }
+  buttonBefore.onclick = clickBeforeMobile
 
-  buttonAfter.addEventListener("click", function (evt) {
+  function clickAfterMobile() {
     imageBefore.style.display = "none"
     imageAfter.style.display = "block"
     thumb.style.left = 40 + "px"
-  })
+  }
+
+  buttonAfter.onclick = clickAfterMobile
 }
+
+function sliderAnimatingTablet() {
+
+  var thumb = slider.querySelector(".slider__control");
+  var imageBefore = document.querySelector(".slider__before");
+  var imageAfter = document.querySelector(".slider__after");
+  let buttonBefore = document.querySelector(".slider__toggle--before");
+  let buttonAfter = document.querySelector(".slider__toggle--after");
+
+  slideBefore.style.width = "";
+  thumb.style.left = "";
+  imageBefore.style.display = "";
+  imageAfter.style.display = "";
+
+
+  function clickBeforeTablet() {
+    slideBefore.style.width = 100 + "%"
+    thumb.style.left = 94.5 + "%";
+  }
+
+  buttonBefore.onclick = clickBeforeTablet;
+
+
+  function clickAfterTablet() {
+    slideBefore.style.width = 0 + "%"
+    thumb.style.left = 0 + "px";
+  }
+
+  buttonAfter.onclick = clickAfterTablet;
+}
+
+
+window.onresize = function () {
+  clearTimeout(doit);
+  doit = setTimeout(function () {
+    if (document.documentElement.clientWidth < 768) {
+      sliderAnimatingMobile();
+    }
+    if (document.documentElement.clientWidth >= 768) {
+      sliderAnimatingTablet();
+    }
+  }, 300);
+};
+
+
+window.onload = function () {
+  if (document.documentElement.clientWidth < 768) {
+    sliderAnimatingMobile();
+  }
+  if (document.documentElement.clientWidth >= 768) {
+    sliderAnimatingTablet();
+  }
+};

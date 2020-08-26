@@ -12,20 +12,12 @@
 
 .slider__list {
   margin-bottom: 31px;
-  //position: relative;
-  //display: block;
-  //width: 100%;
-  //width: 311px;
 
   @media (min-width: $tablet-width) {
     position: relative;
     display: block;
-    //width: 100%;
     width: 690px;
-
-
     text-align: center;
-    //margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -35,7 +27,6 @@
   @media (min-width: $desktop-width) {
     position: relative;
     display: inline-block;
-    //width: 690px;
     width: 100%;
     max-width: 690px;
     overflow: hidden;
@@ -48,33 +39,19 @@
   }
 }
 
-.slide__container-before {
-  //position: absolute;
-  //width: 50%;
-  //height: 100%;
-  //overflow: hidden;
-  //object-fit: none;
-
+.slider__container-before {
   @media (min-width: $tablet-width) {
     position: absolute;
     width: 50%;
-
     overflow: hidden;
     object-fit: none;
-    //&--current {
-    //  width: 100%;
-    //}
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     width: 53%;
-
     overflow: hidden;
     object-fit: none;
-    //&--current {
-    //  width: 100%;
-    //}
   }
 
   // перестроение для градиентного десктопа
@@ -123,11 +100,6 @@
   margin-right: auto;
   margin-left: auto;
 
-  //&--current {
-  //  display: block;
-  //}
-
-
   @media (min-width: $tablet-width) {
     display: block;
     margin-left: 0;
@@ -143,8 +115,6 @@
     margin-right: 0;
     width: 100%;
     height: 517px;
-    //object-fit: none;
-    //object-position: left top;
   }
 }
 
@@ -158,10 +128,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    //margin-top: -101px;
     margin-left: 39px;
   }
-
 
   // перестроение для градиентного десктопа
   @media (min-width: $desktop-width) {
@@ -194,7 +162,6 @@
       border-bottom: 1px solid $color-slide-underline-hover;
     }
   }
-
 
   &--before {
     margin-right: 15px;
@@ -236,8 +203,6 @@
 
 .slider__control {
   position: absolute;
-  //top: 0;
-
   width: 35px;
   height: 6px;
   border-radius: 6px;
