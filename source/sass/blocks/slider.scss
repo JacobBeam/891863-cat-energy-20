@@ -1,6 +1,4 @@
 .slider {
-
-
   @media (max-width: $desktop-width) and (min-width: $tablet-width) {
     width: 690px;
     margin: 0 auto;
@@ -9,7 +7,6 @@
   // перестроение для градиентного десктопа
   @media (min-width: $desktop-width) {
     position: relative;
-
   }
 }
 
@@ -23,7 +20,7 @@
   @media (min-width: $tablet-width) {
     position: relative;
     display: block;
-    width: 100%;
+    //width: 100%;
     width: 690px;
 
 
@@ -38,7 +35,7 @@
   @media (min-width: $desktop-width) {
     position: relative;
     display: inline-block;
-    width: 690px;
+    //width: 690px;
     width: 100%;
     max-width: 690px;
     overflow: hidden;
@@ -52,9 +49,6 @@
 }
 
 .slide__container-before {
-
-
-
   //position: absolute;
   //width: 50%;
   //height: 100%;
@@ -67,11 +61,9 @@
 
     overflow: hidden;
     object-fit: none;
-
     //&--current {
     //  width: 100%;
     //}
-
   }
 
   @media (min-width: $desktop-width) {
@@ -80,17 +72,14 @@
 
     overflow: hidden;
     object-fit: none;
-
     //&--current {
     //  width: 100%;
     //}
-
   }
 
   // перестроение для градиентного десктопа
   @media (min-width: $desktop-width) {
     height: 100%;
-
   }
 }
 
@@ -99,8 +88,6 @@
 
   margin-right: auto;
   margin-left: auto;
-
-
 
   @media (min-width: $tablet-width) {
     background: linear-gradient($color-bg-body 169px, $color-bg-alt 169px 100%);
