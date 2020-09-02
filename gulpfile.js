@@ -112,6 +112,7 @@ exports.copy = copy
 const js = () => {
   return gulp.src("source/js/**/*.js")
     .pipe(gulp.dest("build/js"))
+    .pipe(sourcemap.init())
     .pipe(babel({
       presets: ['@babel/env']
     }))
