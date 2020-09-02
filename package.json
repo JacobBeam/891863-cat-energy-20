@@ -3,11 +3,14 @@
   "private": true,
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
     "browser-sync": "2.26.7",
     "del": "^5.1.0",
     "gulp": "4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.1",
@@ -16,6 +19,7 @@
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^1.4.0",
     "gulp-webp": "^4.0.1",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
@@ -25,7 +29,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "stylelint-fix": "stylelint \"source/sass/**/*.scss\" --fix --syntax scss"
   },
   "browserslist": [
     "last 2 versions",

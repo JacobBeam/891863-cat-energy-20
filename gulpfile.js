@@ -11,6 +11,8 @@ const svgstore = require("gulp-svgstore");
 const csso = require("gulp-csso");
 const imagemin = require('gulp-imagemin');
 const del = require("del");
+const terser = require('gulp-terser');
+const babel = require('gulp-babel');
 
 // Styles
 
@@ -106,14 +108,21 @@ const copy = () => {
 exports.copy = copy
 
 // JS
+
 const js = () => {
-  return gulp.src([
-      "source/js/**/*.js"
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-};
+  return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(terser())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"));
+}
+
 
 exports.js = js
 
